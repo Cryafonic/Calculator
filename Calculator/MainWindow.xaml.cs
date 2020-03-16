@@ -44,6 +44,7 @@ namespace Calculator
             }
         }
 
+        // The all clear button
         private void Button_Click_AC(Object sender, RoutedEventArgs e)
         {
             firstNumber = 0;
@@ -52,6 +53,7 @@ namespace Calculator
             txtResult = "0";
         }
 
+        //The Add button
         private void Button_Click_Plus(object sender, RoutedEventArgs e)
         {
             currentOperator = Operator.Add;
@@ -59,12 +61,14 @@ namespace Calculator
             txtResult.Text = "0";
         }
 
-        private void Button_Click_Percentage(object sender, RoutedEventArgs e)
+        // Calculate the end result
+        private void Button_Click_Equal(object sender, RoutedEventArgs e)
         {
             secondNumber = double.Parse(txtResult.Text);
             txtResult.Text = GetResult(firstNumber, currentOperator, secondNumber);
         }
 
+        // Subtract the values
         private void Button_Click_Minus(object sender , RoutedEventArgs e)
         {
             currentOperator = Operator.Substract;
@@ -72,6 +76,7 @@ namespace Calculator
             txtResult.Text = "0";
         }
 
+        // Multiplay the values
         private void Button_Click_Multiply(object sender, RoutedEventArgs e)
         {
             currentOperator = Operator.Multiply;
@@ -79,6 +84,7 @@ namespace Calculator
             txtResult.Text = "0";
         }
 
+        // Divides the values 
         private void Button_Click_divide(object sender, RoutedEventArgs e)
         {
             currentOperator = Operator.Divide;
@@ -86,7 +92,7 @@ namespace Calculator
             txtResult.Text = "0";
         }
 
-
+        //Logic for the calculations
         private string GetResult(double firstNumber, Operator currentOperator, double secondNumber) 
         {
             if (currentOperator == Operator.Add)
@@ -110,8 +116,6 @@ namespace Calculator
                 return "0";
             }
         }
-
-
 
         public enum Operator
         { 
