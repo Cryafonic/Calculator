@@ -1,4 +1,4 @@
-﻿<Window x:Class="Calculator.App"
+﻿<Window x:Class="Calculator.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -31,8 +31,8 @@
                     Grid.ColumnSpan="4"></TextBlock>
 
         <Button Grid.Row="1" Grid.Column="0" FontSize="55" Click="Button_Click_AC">AC</Button>
-        <Button Grid.Row="1" Grid.Column="1"  FontSize="56" Click="Button_Click_Subtract">+/-</Button>
-        <Button Grid.Row="1" Grid.Column="2" FontSize="56" Click="Button_Click">%</Button>
+        <Button Grid.Row="1" Grid.Column="1"  FontSize="56" Click="Button_Click_div">+/-</Button>
+        <Button Grid.Row="1" Grid.Column="2" FontSize="56" Click="Button_Click_percentage">%</Button>
         <Button Grid.Row="4"  Grid.Column="0" FontSize="56" Click="Button_Click">1</Button>
         <Button Grid.Row="4" Grid.Column="1" FontSize="56" Click="Button_Click">2</Button>
         <Button Grid.Row="4" Grid.Column="2" FontSize="56" Click="Button_Click">3</Button>
@@ -43,12 +43,12 @@
         <Button Grid.Row="2" Grid.Column="1" FontSize="56" Click="Button_Click">8</Button>
         <Button Grid.Row="2" Grid.Column="2" FontSize="56" Click="Button_Click">9</Button>
         <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" FontSize="56" Click="Button_Click">0</Button>
-        <Button Grid.Row="1" Grid.Column="4" FontSize="56" Click="Button_Click_1">/</Button>
-        <Button Grid.Row="2" Grid.Column="4" FontSize="56" Click="Button_Click_*">*</Button>
-        <Button Grid.Row="3" Grid.Column="4" FontSize="56" Click="Button_Click_-">-</Button>
-        <Button Grid.Row="4" Grid.Column="4" FontSize="56" Click="Button_Click_+">+</Button>
-        <Button Grid.Row="5" Grid.Column="4" FontSize="56" Click="Button_Click_+">=</Button>
-        <Button Grid.Row="5" Grid.Column="2" FontSize="56" Click="Button_Click_+">.</Button>
+        <Button Grid.Row="1" Grid.Column="4" FontSize="56" Click="Button_Click_divide">/</Button>
+        <Button Grid.Row="2" Grid.Column="4" FontSize="56" Click="Button_Click_Multiply">*</Button>
+        <Button Grid.Row="3" Grid.Column="4" FontSize="56" Click="Button_Click_Minus">-</Button>
+        <Button Grid.Row="4" Grid.Column="4" FontSize="56" Click="Button_Click_Plus">+</Button>
+        <Button Grid.Row="5" Grid.Column="4" FontSize="56" Click="Button_Click_Equal">=</Button>
+        <Button Grid.Row="5" Grid.Column="2" FontSize="56" Click="Button_Click_Point">.</Button>
         
     </Grid>
 
