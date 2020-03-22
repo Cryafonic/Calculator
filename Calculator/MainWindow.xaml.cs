@@ -50,7 +50,7 @@ namespace Calculator
             firstNumber = 0;
             secondNumber = 0;
             currentOperator = 0;
-            txtResult = "0";
+            txtResult.Text = "0";
         }
 
         //The Add button
@@ -90,6 +90,24 @@ namespace Calculator
             currentOperator = Operator.Divide;
             firstNumber = double.Parse(txtResult.Text);
             txtResult.Text = "0";
+        }
+
+        private void Button_Click_div(object sender, RoutedEventArgs e)
+        {
+            txtResult.Text = (double.Parse(txtResult.Text) * -1).ToString();
+        }
+
+        private void Button_Click_Point(object sender, RoutedEventArgs e)
+        {
+            if (txtResult.Text.IndexOf(".") < 0)
+            {
+                txtResult.Text += ".";
+            }
+        }
+
+        private void Button_Click_percentage(object sender, RoutedEventArgs e)
+        {
+
         }
 
         //Logic for the calculations
