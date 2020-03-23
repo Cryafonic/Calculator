@@ -99,7 +99,7 @@ namespace Calculator
 
         private void Button_Click_Point(object sender, RoutedEventArgs e)
         {
-            if (txtResult.Text.IndexOf(".") < 0)
+            if (txtResult.Text.IndexOf('.') < 0)
             {
                 txtResult.Text += ".";
             }
@@ -107,7 +107,7 @@ namespace Calculator
 
         private void Button_Click_percentage(object sender, RoutedEventArgs e)
         {
-
+            txtResult.Text = (double.Parse(txtResult.Text) / 100).ToString();
         }
 
         //Logic for the calculations
